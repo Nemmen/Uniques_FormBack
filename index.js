@@ -20,7 +20,7 @@ const PORT = 5000;
 connectDB();
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("hui");
 });
 
 app.use("/codeCrusade", require("./routes/codeCrusade"));

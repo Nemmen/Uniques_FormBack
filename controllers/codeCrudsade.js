@@ -2,7 +2,7 @@ const Participant = require("../model/codeCrusade");
 
 const addParticipant = async (req, res) => {
   try {
-    const { email, fullname, admissionNumber, branch, contactNumber } = req.body;
+    const { email, fullname, admissionNumber, branch, contactNumber, language,laptop } = req.body;
 
     // Use await and findOne to check if the participant already exists
     const existingParticipant = await Participant.findOne({ email });
@@ -20,6 +20,8 @@ const addParticipant = async (req, res) => {
       admissionNumber,
       branch,
       contactNumber,
+      language,
+      laptop
     });
 
     await participant.save();

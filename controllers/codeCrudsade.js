@@ -9,7 +9,7 @@ const addParticipant = async (req, res) => {
       const parti = Participant.find({email})
 
       if(parti){
-        res.send("Already registered!")
+        res.status(500).send("Already registered!")
         console.log('user registered already')
         return -1;
       }
